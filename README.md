@@ -1,8 +1,13 @@
 # Azure Python Boilerplate
 
+[![Build Status](https://dev.azure.com/noelbundick/noelbundick/_apis/build/status/noelbundick.azure-python-boilerplate?branchName=master)](https://dev.azure.com/noelbundick/noelbundick/_build/latest?definitionId=38&branchName=master)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+
 Some scaffolding and structure to help bootstrap Python projects on Azure
 
-## VS Code development
+## [Visual Studio Code](https://code.visualstudio.com/docs/languages/python) development
 
 One-time setup
 
@@ -19,7 +24,11 @@ Day-to-day development
 * Open VS Code, everything's all wired up!
 * Hit `F5` to start debugging
 * Hit `Ctrl+F5` to start w/o debugging
-* Hit `Ctrl+Shift+P`/`Cmd+Shift+P` -> `Tasks: Run Task` -> `boilerplate CLI` to run boilerplate as a VS Code task w/ specified args
+* Hit `Ctrl+Shift+P`/`Cmd+Shift+P`
+  * `Tasks: Run Task` -> `boilerplate CLI` to run boilerplate as a VS Code task w/ specified args
+  * `Python: Run All Unit Tests` to run tests via pytest
+
+> You may need to open a `.py` file to activate the Python VS Code extension
 
 
 ## Console development
