@@ -7,19 +7,18 @@
 
 Some scaffolding and structure to help bootstrap Python projects on Azure
 
-## [Visual Studio Code](https://code.visualstudio.com/docs/languages/python) development
-
-One-time setup
+## One-time setup
 
 ```shell
+# Create a virtual environment and activate it
 python3 -m venv .venv
 source .venv/bin/activate
 
-# Install dependencies for dev & testing
-python -m pip install -r ./requirements.dev.txt
+# Install boilerplate in editable mode with dev dependencies
+python -m pip install '.[dev]'
 ```
 
-Day-to-day development
+## Developing in [Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
 
 * Open VS Code, everything's all wired up!
 * Hit `F5` to start debugging
@@ -31,23 +30,7 @@ Day-to-day development
 > You may need to open a `.py` file to activate the Python VS Code extension
 
 
-## Console development
-
-One-time setup
-
-```shell
-# Create a virtual environment and activate it
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Install dependencies for dev & testing
-python -m pip install -r ./requirements.dev.txt
-
-# Install module in editable mode
-python setup.py develop
-```
-
-Day-to-day development
+## Developing in a terminal
 
 ```shell
 # Make sure your virtual environment is active

@@ -12,11 +12,14 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
 
-- script: python -m pip install tox
+- script: python -m pip install tox -U
   displayName: Install tox
 
+- script: tox --notest
+  displayName: Provision tox environments
+
 - script: tox
-  displayName: Tox run tests
+  displayName: Run tox tests
 
 - task: PublishCodeCoverageResults@1
   inputs:

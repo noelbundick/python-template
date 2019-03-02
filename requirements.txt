@@ -1,1 +1,0 @@
-# empty placeholder - specify runtime dependencies in setup.cfg
