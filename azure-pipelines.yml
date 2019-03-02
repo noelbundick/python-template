@@ -18,13 +18,6 @@ steps:
 - script: tox
   displayName: Tox run tests
 
-- task: PublishTestResults@2
-  displayName: Publish Test Results
-  condition: succeededOrFailed()
-  inputs:
-    testResultsFiles: '**/test-*.xml'
-    testRunTitle: 'Test results for $(python.version)'
-
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: Cobertura

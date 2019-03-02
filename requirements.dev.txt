@@ -8,5 +8,6 @@ flake8
 
 # Testing
 pytest
+pytest-azurepipelines
 pytest-cov
 tox
