@@ -2,9 +2,7 @@ jobs:
 - template: .azure-pipelines/jobs/build.yml
   parameters:
     os: linux
-    toxenvs: [py36, py37]
 
 - template: .azure-pipelines/jobs/build.yml
   parameters:
     os: windows
-    toxenvs: [py36]
