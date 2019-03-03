@@ -1,7 +1,7 @@
 # Azure Python Boilerplate
 
 [![Build Status](https://dev.azure.com/noelbundick/noelbundick/_apis/build/status/noelbundick.azure-python-boilerplate?branchName=master)](https://dev.azure.com/noelbundick/noelbundick/_build/latest?definitionId=38&branchName=master)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![Code style: black](https://img.shields.io/badge/code+style-black-000000.svg)](https://github.com/ambv/black)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -15,7 +15,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 # Install boilerplate in editable mode with dev dependencies
-python -m pip install '.[dev]'
+python -m pip install -e '.[dev]'
 ```
 
 ## Developing in [Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
