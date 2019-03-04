@@ -16,6 +16,7 @@ jobs:
     matrix:
       ${{ each version in parameters.pythonVersions }}:
         ${{ version }}:
+          os: ${{ parameters.os }}
           python.version: ${{ version }}
 
   steps:
@@ -41,5 +42,5 @@ jobs:
   - script: tox --installpkg $(WHEEL) --notest
     displayName: Provision tox environment
 
-  - script: tox --installpkg $(WHEEL) --test-run-title="$(Agent.OS) Python $(python.version)"
+  - script: tox --installpkg $(WHEEL) --test-run-title="$(os) Python $(python.version)"
     displayName: Run tox tests
