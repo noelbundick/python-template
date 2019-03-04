@@ -50,6 +50,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 junit/
+test-cov.xml
 
 # Translations
 *.mo

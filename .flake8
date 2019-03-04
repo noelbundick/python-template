@@ -8,4 +8,5 @@ exclude =
     build,
     dist,
     *.pyc,
-    *.egg-info
+    *.egg-info,
+    .eggs
