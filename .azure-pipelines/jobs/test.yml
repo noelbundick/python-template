@@ -3,7 +3,7 @@ parameters:
   pythonVersions: [3.5, 3.6, 3.7]
 
 jobs:
-- job: ${{ format('Build_{0}', parameters.os) }}
+- job: ${{ format('Test_{0}', parameters.os) }}
   dependsOn: Package
 
   pool:

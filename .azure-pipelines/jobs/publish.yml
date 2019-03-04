@@ -1,10 +1,11 @@
 parameters:
   artifactFeed: 
   pythonVersion: 3.7
+  dependsOn: ['Package']
 
 jobs:
 - job: Publish
-  dependsOn: Package
+  dependsOn: ${{ parameters.dependsOn }}
 
   pool:
     vmImage: ubuntu-16.04
