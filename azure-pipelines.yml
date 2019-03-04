@@ -15,7 +15,5 @@ jobs:
   parameters:
     artifactFeed: bits
     dependsOn:
-    - 'Test_linux 3.6'
-    - 'Test_linux 3.7'
-    - 'Test_windows 3.6'
-    - 'Test_windows 3.7'
+    - 'Test_linux'
+    - 'Test_windows'
