@@ -10,3 +10,7 @@ jobs:
   parameters:
     os: windows
     pythonVersions: [3.6, 3.7]
+
+- template: .azure-pipelines/jobs/publish.yml
+  parameters:
+    artifactFeed: bits
