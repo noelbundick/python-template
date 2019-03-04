@@ -16,11 +16,18 @@ jobs:
     inputs:
       versionSpec: '$(python.version)'
 
-  - script: python -m pip install pip setuptools wheel -U
+  - script: python -m pip install pip setuptools setuptools_scm wheel -U
     displayName: Install packaging utils
+
+  - bash: |
+      VERSION=`python -c 'import setuptools_scm; print(setuptools_scm.get_version(local_scheme=lambda v: ""))'`
+      echo "##vso[task.setvariable variable=VERSION]$VERSION"
+    displayName: Set WHEEL variable to current artifact
 
   - script: python setup.py sdist bdist_wheel
     displayName: Build sdist and wheel
+    env:
+      SETUPTOOLS_SCM_PRETEND_VERSION: $(VERSION)
   
   - task: PublishPipelineArtifact@0
     displayName: Publish artifacts
