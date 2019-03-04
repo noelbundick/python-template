@@ -41,5 +41,5 @@ jobs:
   - script: tox --installpkg $(WHEEL) --notest
     displayName: Provision tox environment
 
-  - script: tox --installpkg $(WHEEL)
+  - script: tox --installpkg $(WHEEL) --test-run-title="$(Agent.OS) Python $(python.version)"
     displayName: Run tox tests
