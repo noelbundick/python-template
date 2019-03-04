@@ -4,13 +4,14 @@ parameters:
 
 jobs:
 - job: Publish
+  dependsOn: Package
 
   pool:
     vmImage: ubuntu-16.04
 
   variables:
     python.version: ${{ parameters.pythonVersion }}
-    artifactFeed: ${{ parameters.artifactFeeds }}
+    artifactFeed: ${{ parameters.artifactFeed }}
 
   steps:
   - checkout: none
@@ -34,5 +35,5 @@ jobs:
     inputs:
       artifactFeeds: $(artifactFeed)
 
-  - script: twine -r $(artifactFeed) --config-file $(PYPIRC_PATH) dist/*
+  - script: twine upload -r $(artifactFeed) --config-file $(PYPIRC_PATH) dist/*
     displayName: Publish artifacts
