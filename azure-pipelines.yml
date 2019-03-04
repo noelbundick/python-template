@@ -1,10 +1,12 @@
 jobs:
-- template: .azure-pipelines/jobs/build.yml
+- template: .azure-pipelines/jobs/package.yml
+
+- template: .azure-pipelines/jobs/test.yml
   parameters:
     os: linux
     pythonVersions: [3.6, 3.7]
 
-- template: .azure-pipelines/jobs/build.yml
+- template: .azure-pipelines/jobs/test.yml
   parameters:
     os: windows
     pythonVersions: [3.6, 3.7]
