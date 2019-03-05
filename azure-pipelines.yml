@@ -1,17 +1,24 @@
-jobs:
-- template: .azure-pipelines/jobs/package.yml
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      endpoint: GitHub
+      name: noelbundick/azure-pipelines-python-templates
 
-- template: .azure-pipelines/jobs/test.yml
+jobs:
+- template: package.yml@templates
+
+- template: test.yml@templates
   parameters:
     os: linux
     pythonVersions: [3.6, 3.7]
 
-- template: .azure-pipelines/jobs/test.yml
+- template: test.yml@templates
   parameters:
     os: windows
     pythonVersions: [3.6, 3.7]
 
-- template: .azure-pipelines/jobs/publish.yml
+- template: publish.yml@templates
   parameters:
     artifactFeed: bits
     dependsOn:
