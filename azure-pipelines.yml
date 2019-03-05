@@ -4,6 +4,7 @@ resources:
       type: github
       endpoint: GitHub
       name: noelbundick/azure-pipelines-python-templates
+      ref: refs/tags/0.0.1
 
 jobs:
 - template: package.yml@templates
