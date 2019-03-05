@@ -20,9 +20,10 @@ jobs:
     displayName: Install packaging utils
 
   - bash: |
+      # This removes the +date local version component so it can be later uploaded to Azure Artifacts, PyPI, etc
       VERSION=`python -c 'import setuptools_scm; print(setuptools_scm.get_version(local_scheme=lambda v: ""))'`
       echo "##vso[task.setvariable variable=VERSION]$VERSION"
-    displayName: Set WHEEL variable to current artifact
+    displayName: Set VERSION variable
 
   - script: python setup.py sdist bdist_wheel
     displayName: Build sdist and wheel
