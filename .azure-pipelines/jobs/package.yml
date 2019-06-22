@@ -16,8 +16,16 @@ jobs:
     inputs:
       versionSpec: '$(python.version)'
 
-  - script: python -m pip install pip setuptools setuptools_scm wheel -U
+  - script: python -m pip install -e '.[dev]' -U --upgrade-strategy eager
     displayName: Install packaging utils
+  
+  - bash: find . -type f -name "*.py" | xargs pylint -d R
+    displayName: "Linting: pylint"
+    workingDirectory: $(workingDirectory)
+
+  - bash: flake8
+    displayName: "Linting: flake8"
+    workingDirectory: $(workingDirectory)
 
   - bash: |
       # This removes the +date local version component so it can be later uploaded to Azure Artifacts, PyPI, etc

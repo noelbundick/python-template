@@ -1,3 +1,3 @@
 class Hello:
-    def Word(self, word="world"):
-        return word
+    def greet(self, word="world"):
+        return f"Hello, {word}!"

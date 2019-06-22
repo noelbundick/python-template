@@ -14,8 +14,8 @@ Some scaffolding and structure to help bootstrap Python projects on Azure
 python3 -m venv .venv
 source .venv/bin/activate
 
-# Install boilerplate in editable mode with dev dependencies
-python -m pip install -e '.[dev]'
+# Install boilerplate in editable mode with latest dev dependencies
+python -m pip install -e '.[dev]' -U --upgrade-strategy eager
 ```
 
 ## Developing in [Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
