@@ -19,7 +19,7 @@ jobs:
   - script: python -m pip install -e '.[dev]' -U --upgrade-strategy eager
     displayName: Install packaging utils
   
-  - bash: find . -type f -name "*.py" | xargs pylint -d R
+  - bash: find . -type f -name "*.py" -not -path "*.eggs*" | xargs pylint -d R
     displayName: "Linting: pylint"
 
   - bash: flake8
