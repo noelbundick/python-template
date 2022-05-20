@@ -1,10 +1,10 @@
-# Azure Python Boilerplate
+# Python Project Template
 
 ![Build](https://github.com/noelbundick/python-template/actions/workflows/build.yaml/badge.svg)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-Some scaffolding and structure to help bootstrap Python projects
+Some scaffolding and structure to help bootstrap Python package projects
 
 ## Getting started
 
