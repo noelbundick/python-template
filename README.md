@@ -35,4 +35,13 @@ flake8
 
 # tests
 pytest
+
+# check for security issues
+pipenv check
+
+# update packages
+pipenv update
+
+# build a package
+python -m build
 ```
