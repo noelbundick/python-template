@@ -18,10 +18,7 @@ jobs:
 
       - name: Install tools
         run: |
-          python -m pip install --upgrade pip pipenv
-          pipenv install .[dev]
-        env:
-          PIPENV_VENV_IN_PROJECT: "1"
+          python -m pip install -e '.[dev]'
 
       - name: Pylint
         run: pylint src
@@ -30,7 +27,7 @@ jobs:
         run: flake8 .
 
       - name: Test
-        run: pytest src
+        run: pytest
 
       - name: Package
         run: python -m build

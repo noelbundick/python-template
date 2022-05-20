@@ -8,7 +8,7 @@ class Hello:
 
     def greet(self, word="world"):
         """Greet the caller"""
-        return f"Hello, {word}! from {self.myName}"
+        return f"Hello, {word} from {self.myName}!"
 
     def echo(self, word):
         """Echo the caller"""

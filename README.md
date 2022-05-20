@@ -1,22 +1,15 @@
 # Azure Python Boilerplate
 
-[![Build Status](https://dev.azure.com/noelbundick/noelbundick/_apis/build/status/noelbundick.azure-python-boilerplate?branchName=master)](https://dev.azure.com/noelbundick/noelbundick/_build/latest?definitionId=38&branchName=master)
-[![Code style: black](https://img.shields.io/badge/code+style-black-000000.svg)](https://github.com/ambv/black)
+![Build](https://github.com/noelbundick/python-template/actions/workflows/build.yaml/badge.svg)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-Some scaffolding and structure to help bootstrap Python projects on Azure
+Some scaffolding and structure to help bootstrap Python projects
 
-## One-time setup
+## Getting started
 
-```shell
-# Create a virtual environment and activate it
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Install boilerplate in editable mode with latest dev dependencies
-python -m pip install -e '.[dev]' -U --upgrade-strategy eager
-```
+* [Use this template](https://github.com/noelbundick/python-template/generate) to create a new repo
+* Create a new [Codespace](https://docs.github.com/en/codespaces/getting-started/quickstart)
 
 ## Developing in [Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
 
@@ -25,24 +18,21 @@ python -m pip install -e '.[dev]' -U --upgrade-strategy eager
 * Hit `Ctrl+F5` to start w/o debugging
 * Hit `Ctrl+Shift+P`/`Cmd+Shift+P`
   * `Tasks: Run Task` -> `boilerplate CLI` to run boilerplate as a VS Code task w/ specified args
-  * `Python: Run All Unit Tests` to run tests via pytest
-
-> You may need to open a `.py` file to activate the Python VS Code extension
-
+  * `Test: Run All Tests` to run tests via pytest
 
 ## Developing in a terminal
 
 ```shell
-# Make sure your virtual environment is active
-source .venv/bin/activate
-
 # running with console_script
 boilerplate foo
 
 # running as a module
 python -m boilerplate bar
 
-# running tests
+# linting
+pylint src
+flake8
+
+# tests
 pytest
-tox
 ```
