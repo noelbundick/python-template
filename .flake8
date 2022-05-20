@@ -10,3 +10,6 @@ exclude =
     *.pyc,
     *.egg-info,
     .eggs
+show-source = True
+statistics = True
+count = True
